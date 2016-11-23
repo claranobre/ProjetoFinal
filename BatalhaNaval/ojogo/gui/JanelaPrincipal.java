@@ -31,7 +31,7 @@ import javax.swing.Timer;
 import ojogo.*;
 
 /**
- * A janela principal da aplicação.
+ * A janela principal da aplicação
  * 
  * @param jogo
  * @author Ana Clara Nobre Mendes
