@@ -12,9 +12,9 @@ public class Navio implements Serializable {
 	
 	// Constantes para os identificadores dos navios.
 	public static final int BARCO_PATRULHA = 2; //Corveta
-	public static final int DESTROIER = 4; //Destroyer
-	public static final int SUBMARINO = 8; //Submarino
-	public static final int ENCOURACADO = 16; //Fragata
+	public static final int SUBMARINO = 4; //Submarino
+	public static final int ENCOURACADO = 8; //Fragata
+	public static final int DESTROIER = 16; //Destroyer
 	public static final int PORTA_AVIOES = 32; //Não utilizado
 
 	public static final int HORIZONTAL = 0;
@@ -43,11 +43,11 @@ public class Navio implements Serializable {
             case BARCO_PATRULHA:
                 return new Navio("Corveta", 2, 2, jog);
             case DESTROIER:                                             
-                return new Navio("Destroyer", 3, 4, jog);
+                return new Navio("Destroyer", 3, 16, jog);
             case SUBMARINO:                                             
-                return new Navio("Submarino", 3, 8, jog);
+                return new Navio("Submarino", 3, 4, jog);
             case ENCOURACADO:                                           
-                return new Navio("Fragata", 4, 16, jog);
+                return new Navio("Fragata", 4, 8, jog);
             /*case PORTA_AVIOES:                                          
                 return new Navio("Porta-aviões", 5, 32, jog);*/
             default:

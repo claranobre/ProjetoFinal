@@ -7,8 +7,10 @@ import java.util.ArrayList;
 import batalhanaval.exceptions.PosicaoJaAtingidaException;
 
 /**
- * Jogador de batalha naval.
- * 
+ * @class Jogador
+ * Movimentos do jogador,
+ * posição da frota,
+ * localização de tiros
  * @param jogo
  */
 
@@ -25,10 +27,10 @@ public class Jogador implements Serializable {
 	private int frotaRestante;
 
 	/**
+	 * @construct Jogador
 	 * Cria um novo jogador para o jogo.
-	 * 
 	 * @param jogo
-	 * Jogo do qual o jogador participa.
+	 * Jogo do qual o jogador participa
 	 */
 
 	public Jogador(Jogo jogo) {
@@ -37,11 +39,11 @@ public class Jogador implements Serializable {
 		this.frota = new Navio[4];
 			
 		this.tiros = new ArrayList<Point>();
-
+				
         frota[0] = Navio.constroiNavio(Navio.BARCO_PATRULHA, this); //Corveta
-        frota[1] = Navio.constroiNavio(Navio.DESTROIER, this); //Destroyer
-        frota[2] = Navio.constroiNavio(Navio.SUBMARINO, this); //Submarino
-        frota[3] = Navio.constroiNavio(Navio.ENCOURACADO, this); //Fragata
+        frota[1] = Navio.constroiNavio(Navio.SUBMARINO, this); //Submarino
+        frota[2] = Navio.constroiNavio(Navio.ENCOURACADO, this); //Fragata
+        frota[3] = Navio.constroiNavio(Navio.DESTROIER, this); //Destroyer
         //frota[4] = Navio.constroiNavio(Navio.PORTA_AVIOES, this);
         
         for (int i = 0; i < frota.length; i++)

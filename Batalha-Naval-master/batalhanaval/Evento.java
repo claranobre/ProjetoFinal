@@ -1,6 +1,7 @@
 package batalhanaval;
 
 /**
+ * @class Evento
  * Representa um evento do jogo
  */
 

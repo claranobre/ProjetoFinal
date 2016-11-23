@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * Jogo de batalha naval
+ * Jogo de Batalha Naval
  */
 
 public class Jogo implements Serializable {
