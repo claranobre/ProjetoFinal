@@ -1,6 +1,6 @@
-package ojogo;
+package batalhanaval;
 
-import ojogo.gui.*;
+import batalhanaval.gui.*;
 
 public class Principal {
 	/*

@@ -1,10 +1,10 @@
-package ojogo;
+package batalhanaval;
 
 import java.awt.Point;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import ojogo.exceptions.PosicaoJaAtingidaException;
+import batalhanaval.exceptions.PosicaoJaAtingidaException;
 
 /**
  * Jogador de batalha naval.

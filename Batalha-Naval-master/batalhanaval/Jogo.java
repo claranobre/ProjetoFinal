@@ -1,4 +1,4 @@
-package ojogo;
+package batalhanaval;
 
 import java.io.Serializable;
 import java.util.ArrayList;

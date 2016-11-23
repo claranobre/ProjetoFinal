@@ -1,4 +1,4 @@
-package ojogo.gui;
+package batalhanaval.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -28,7 +28,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.Timer;
 
-import ojogo.*;
+import batalhanaval.*;
 
 /**
  * A janela principal da aplicação

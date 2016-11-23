@@ -1,4 +1,4 @@
-package ojogo.gui;
+package batalhanaval.gui;
 
 
 import java.awt.Color;
@@ -13,8 +13,8 @@ import java.awt.event.MouseMotionListener;
 
 import javax.swing.JPanel;
 
-import ojogo.*;
-import ojogo.exceptions.PosicaoJaAtingidaException;
+import batalhanaval.*;
+import batalhanaval.exceptions.PosicaoJaAtingidaException;
 
 /**
  * Grade representando os tabuleiros dos jogadores.

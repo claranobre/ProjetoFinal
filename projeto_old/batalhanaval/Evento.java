@@ -1,4 +1,4 @@
-package ojogo;
+package batalhanaval;
 
 /**
  * Representa um evento do jogo

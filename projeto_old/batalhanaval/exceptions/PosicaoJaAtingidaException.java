@@ -1,4 +1,4 @@
-package ojogo.exceptions;
+package batalhanaval.exceptions;
 
 /**
  * Exceção que indica que a posição do tabuleiro

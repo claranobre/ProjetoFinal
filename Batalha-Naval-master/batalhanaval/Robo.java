@@ -1,4 +1,4 @@
-package ojogo;
+package batalhanaval;
 
 import java.awt.Point;
 import java.util.ArrayList;
