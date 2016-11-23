@@ -125,8 +125,8 @@ public class JanelaPrincipal extends JFrame {
 		String arquivos1[] = new String[]
 		        {"agua", "fogo", "mar1", "mar2"};
 		String arquivos2[] = new String[]
-		        {"Corveta", "Submarino", "Fragata",
-				 "Destroyer"};
+		        {"BarcoPatrulha", "Destroier", "Submarino",
+				 "Encouracado", "PortaAvioes"};
 		try {
 			agua = ImageIO.read(getClass().getClassLoader().getResource("img/"
 					+ arquivos1[0] + ".png"));
@@ -240,18 +240,37 @@ public class JanelaPrincipal extends JFrame {
 
 	public Image getImagemNavio(int id, int or) {
 		switch (id) {
-		case Navio.CORVETA:
+		case Navio.BARCO_PATRULHA: //Corveta
 			return (or == Navio.VERTICAL ? imagensNavios[4] : imagensNavios[0]);
-		case Navio.SUBMARINO:                                             
+		case Navio.DESTROIER: //Destroyer                                             
 			return (or == Navio.VERTICAL ? imagensNavios[5] : imagensNavios[1]);
-		case Navio.FRAGATA:                                             
+		case Navio.SUBMARINO: //Submarino                                             
 			return (or == Navio.VERTICAL ? imagensNavios[6] : imagensNavios[2]);
-		case Navio.DESTROYER:                                           
+		case Navio.ENCOURACADO: //Fragata                                           
 			return (or == Navio.VERTICAL ? imagensNavios[7] : imagensNavios[3]);
 		default:
 			return null;
 		}
 	}
+
+	/*
+	public Image getImagemNavio(int id, int or) {
+		switch (id) {
+		case Navio.BARCO_PATRULHA:
+			return (or == Navio.VERTICAL ? imagensNavios[5] : imagensNavios[0]);
+		case Navio.DESTROIER:                                             
+			return (or == Navio.VERTICAL ? imagensNavios[6] : imagensNavios[1]);
+		case Navio.SUBMARINO:                                             
+			return (or == Navio.VERTICAL ? imagensNavios[7] : imagensNavios[2]);
+		case Navio.ENCOURACADO:                                           
+			return (or == Navio.VERTICAL ? imagensNavios[8] : imagensNavios[3]);
+		case Navio.PORTA_AVIOES:                                          
+			return (or == Navio.VERTICAL ? imagensNavios[9] : imagensNavios[4]);
+		default:
+			return null;
+		}
+	}
+	*/
 
 	public void atualizaGrades() {
 		mapa1.repaint();

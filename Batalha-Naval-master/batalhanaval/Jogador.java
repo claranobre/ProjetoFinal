@@ -35,20 +35,21 @@ public class Jogador implements Serializable {
 		this.jogo = jogo;
 		this.tabuleiro = new Tabuleiro(10, 10); // Tabuleiro zerado
 		this.frota = new Navio[4];
-
+			
 		this.tiros = new ArrayList<Point>();
 
-        frota[0] = Navio.constroiNavio(Navio.CORVETA, this);
-        frota[1] = Navio.constroiNavio(Navio.SUBMARINO, this);
-        frota[2] = Navio.constroiNavio(Navio.FRAGATA, this);
-        frota[3] = Navio.constroiNavio(Navio.DESTROYER, this);
-
-		for (int i = 0; i < frota.length; i++)
+        frota[0] = Navio.constroiNavio(Navio.BARCO_PATRULHA, this); //Corveta
+        frota[1] = Navio.constroiNavio(Navio.DESTROIER, this); //Destroyer
+        frota[2] = Navio.constroiNavio(Navio.SUBMARINO, this); //Submarino
+        frota[3] = Navio.constroiNavio(Navio.ENCOURACADO, this); //Fragata
+        //frota[4] = Navio.constroiNavio(Navio.PORTA_AVIOES, this);
+        
+        for (int i = 0; i < frota.length; i++)
 			this.frotaRestante += frota[i].getId();
 	}
 
 	/**
-	 * Atira num ponto determinado
+	 * Atira num ponto determinado.
 	 * 
 	 * @param linha
 	 * @param coluna
@@ -71,7 +72,7 @@ public class Jogador implements Serializable {
 	}
 
 	/**
-	 * Atira aleatoriamente
+	 * Atira aleatoriamente.
 	 * 
 	 */
 	public int atira() {
@@ -88,7 +89,7 @@ public class Jogador implements Serializable {
 	}
 
 	/**
-	 * Posiciona e define a orientacao de um navio no tabuleiro
+	 * Posiciona e define a orientacao de um navio no tabuleiro.
 	 * 
 	 * @param pos Posicao do navio.
 	 * @param or Orientacao (vertical ou horizontal).
@@ -113,7 +114,7 @@ public class Jogador implements Serializable {
 
 	/**
 	 * Destroi um navio do jogador, subtraindo id de seu
-	 * total de identificadores de navios
+	 * total de identificadores de navios.
 	 * 
 	 * @param id O identificador do navio destruido.
 	 */
@@ -157,6 +158,8 @@ public class Jogador implements Serializable {
 	}
 
 	/**
+	 * Retorna o oponente do jogador.
+	 * 
 	 * @return <code>Jogador</code>
 	 */
 	public Jogador getOponente() {
