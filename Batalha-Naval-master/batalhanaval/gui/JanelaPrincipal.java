@@ -237,41 +237,24 @@ public class JanelaPrincipal extends JFrame {
 	public Image getImagemAgua() {
 		return agua;
 	}
-
+	
 	public Image getImagemNavio(int id, int or) {
 		switch (id) {
 		case Navio.BARCO_PATRULHA: //Corveta
-			return (or == Navio.VERTICAL ? imagensNavios[4] : imagensNavios[0]);
-		case Navio.DESTROIER: //Destroyer                                             
-			return (or == Navio.VERTICAL ? imagensNavios[5] : imagensNavios[1]);
-		case Navio.SUBMARINO: //Submarino                                             
-			return (or == Navio.VERTICAL ? imagensNavios[6] : imagensNavios[2]);
-		case Navio.ENCOURACADO: //Fragata                                           
-			return (or == Navio.VERTICAL ? imagensNavios[7] : imagensNavios[3]);
-		default:
-			return null;
-		}
-	}
-
-	/*
-	public Image getImagemNavio(int id, int or) {
-		switch (id) {
-		case Navio.BARCO_PATRULHA:
 			return (or == Navio.VERTICAL ? imagensNavios[5] : imagensNavios[0]);
-		case Navio.DESTROIER:                                             
+		case Navio.DESTROIER:	//Não utilizado                               
 			return (or == Navio.VERTICAL ? imagensNavios[6] : imagensNavios[1]);
-		case Navio.SUBMARINO:                                             
+		case Navio.SUBMARINO:	//Submarino                             
 			return (or == Navio.VERTICAL ? imagensNavios[7] : imagensNavios[2]);
-		case Navio.ENCOURACADO:                                           
+		case Navio.ENCOURACADO: //Fragata                                  
 			return (or == Navio.VERTICAL ? imagensNavios[8] : imagensNavios[3]);
-		case Navio.PORTA_AVIOES:                                          
+		case Navio.PORTA_AVIOES: //Destroyer                                   
 			return (or == Navio.VERTICAL ? imagensNavios[9] : imagensNavios[4]);
 		default:
 			return null;
 		}
 	}
-	*/
-
+	
 	public void atualizaGrades() {
 		mapa1.repaint();
 		mapa2.repaint();
