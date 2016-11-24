@@ -38,7 +38,7 @@ public class Robo extends Jogador {
 	}
 	
 	/**
-	 * O método de ataque do jogador robô.
+	 * O método de ataque do jogador robô
 	 * 
 	 * Age de acordo com o nível de dificuldade do jogo:<br><br>
 	 * 

@@ -11,18 +11,20 @@ public class Jogo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /*
+    /**
      *  Constantes
      */
     
-    /**
+    /*
      * Niveis de dificuldade
      */
     public static final int FACIL = 0;
     public static final int MEDIO = 1;
     public static final int DIFICIL = 2;
 
-    // Estados do jogo
+    /*
+     * Estados do jogo
+     */
     public static final int POSICIONANDO_NAVIOS = 0;
     public static final int VEZ_JOG1 = 1;
     public static final int VEZ_JOG2 = 2;
@@ -99,8 +101,7 @@ public class Jogo implements Serializable {
     }
 
     /**
-     * Remove e retorna o primeiro evento da fila.
-     *
+     * Remove e retorna o primeiro evento da fila
      * @return Evento
      */
     public Evento getEvento () {

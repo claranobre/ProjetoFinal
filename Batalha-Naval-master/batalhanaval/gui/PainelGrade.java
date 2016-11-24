@@ -21,7 +21,7 @@ import batalhanaval.exceptions.PosicaoJaAtingidaException;
  */
 @SuppressWarnings("serial")
 public class PainelGrade extends JPanel {
-	public static final int DIM_QUADRADO = 30;
+	public static final int DIM_QUADRADO = 35;
 	
 	private JanelaPrincipal principal;
 	private Jogador jogador;

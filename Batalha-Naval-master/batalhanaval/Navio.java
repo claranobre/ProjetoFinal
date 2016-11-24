@@ -48,6 +48,8 @@ public class Navio implements Serializable {
                 return new Navio("Submarino", 3, 4, jog);
             case ENCOURACADO:                                           
                 return new Navio("Fragata", 4, 8, jog);
+            case DESTROIER:
+            	return new Navio("Destroier", 4, 32, jog);
             default:
                 return null;
 		}

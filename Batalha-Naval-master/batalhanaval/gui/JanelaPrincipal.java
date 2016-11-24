@@ -1,5 +1,9 @@
 package batalhanaval.gui;
 
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -17,6 +21,7 @@ import java.io.ObjectOutputStream;
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -66,15 +71,37 @@ public class JanelaPrincipal extends JFrame {
 	private JRadioButtonMenuItem itemNivelDificil;
 	private JRadioButtonMenuItem itemNivelAtual; // Identifica o nível atual
 
+	//private JMenu menuIniciarPartida;
+	
+	private JMenu menuAtira;
+	
 	private JMenu menuAjuda;
 	private JMenuItem itemAjudaSobre;
 
 	private JTextArea caixaEventos;
 	
+	private JButton iniciarJogo;
+	private JButton atirar;
+	
+	
+	
 	private Timer temp;
 
 	public JanelaPrincipal(Jogo jogo) {
 		super("Batalha Naval " + Principal.VERSAO);
+		
+		
+		JButton iniciarJogo = new JButton("Iniciar Jogo");
+		iniciarJogo.setSize(180, 25);
+		iniciarJogo.setLocation(70, 322);
+		add(iniciarJogo);
+		iniciarJogo.setVisible(true);
+		
+		JButton atirar = new JButton("Atirar!!!");
+		atirar.setSize(180, 25);
+		atirar.setLocation(450, 322);
+		add(atirar);
+		atirar.setVisible(true);
 		
 		this.jogo = jogo;
 		this.dificuldadeAtual = jogo.getDificuldade();
@@ -104,6 +131,7 @@ public class JanelaPrincipal extends JFrame {
 			}
 		};
 		
+		
 		temp =  new Timer(1000, fazJogada);
 		
 		abreImagens();
@@ -112,7 +140,7 @@ public class JanelaPrincipal extends JFrame {
 		adicionaMenus();
 		
 	}
-
+	
 	/**
 	 * Lê as imagens a partir do disco.
 	 * 
@@ -216,6 +244,15 @@ public class JanelaPrincipal extends JFrame {
 
 		barraMenus = new JMenuBar();
 		barraMenus.add(menuJogo);
+		
+		//menuIniciarPartida = new JMenu("Iniciar_Partida");
+		//menuIniciarPartida.setMnemonic('I');
+		//barraMenus.add(menuIniciarPartida);
+		
+		//menuAtira = new JMenu("Atira");
+		//menuAtira.setMnemonic('A');
+		//barraMenus.add(menuAtira);
+		
 
 		menuAjuda = new JMenu("Ajuda");
 		menuAjuda.setMnemonic('A');
@@ -237,8 +274,8 @@ public class JanelaPrincipal extends JFrame {
 	public Image getImagemAgua() {
 		return agua;
 	}
-	
-	public Image getImagemNavio(int id, int or) {
+
+		public Image getImagemNavio(int id, int or) {
 		switch (id) {
 		case Navio.BARCO_PATRULHA: //Corveta
 			return (or == Navio.VERTICAL ? imagensNavios[5] : imagensNavios[0]);
@@ -254,7 +291,7 @@ public class JanelaPrincipal extends JFrame {
 			return null;
 		}
 	}
-	
+
 	public void atualizaGrades() {
 		mapa1.repaint();
 		mapa2.repaint();
@@ -363,7 +400,7 @@ public class JanelaPrincipal extends JFrame {
 				JanelaSobre sobre = new JanelaSobre(JanelaPrincipal.this);
 				sobre.pack();
 				sobre.setVisible(true);
-			}
+			} 
 		}
 	}
 	
