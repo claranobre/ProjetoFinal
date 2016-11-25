@@ -16,22 +16,9 @@ Lembrando que nenhum navio poderá estar sobreoposto ao outro.
 
 ## Classes mais importantes para o desenvolvimento do jogo
 
-* JOGO
+* [JOGO](Jogo.java)
 
-A classe ```Jogo``` é onde iremos definir a ```ArrayList``` dos eventos, esses eventos são baseados em estados, em que o jogo começou, o jogador está jogando, esperando jogada do adversário  e por fim o fim do jogo. Existe também as dificuldades do jogo (Fácil, médio e difícil) que irá definir o algoritmo de "inteligência" da I.A. para acertar os navios do jogador.
+A classe ```Jogo``` é onde iremos definir a ```ArrayList``` dos eventos, esses eventos são baseados em estados, em que o jogo começou, o jogador está jogando, esperando a jogada do adversário  e o fim do jogo. Para ser possível captar esses estados foi utilizado ```Serialização``` dos objetos. Sabendo que como a classe Pai implementou ```Serializable``` então as subclasses implicitamente farão Serialização, e como trabalhamos com Herança e Polimorfismo todas as demais classes implementam ```Serializable```.Existe também as dificuldades do jogo (fácil, médio e difícil) que irá definir o algoritmo de "inteligência" da I.A. para acertar os navios do jogador.
 
-```python
-private ArrayList<Evento> eventos;
 
-    public Jogo(int dif) {
-        jogadores = new Jogador[2];
-        jogadores[0] = new Jogador(this);
-        jogadores[1] = new Robo(this);
-
-        dificuldade = dif;
-
-        eventos = new ArrayList<Evento>();
-
-        setEstado(POSICIONANDO_NAVIOS);
-    }
-```
+* JOGADOR
