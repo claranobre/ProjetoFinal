@@ -16,9 +16,9 @@ Lembrando que nenhum navio poderá estar sobreoposto ao outro.
 # Classes mais importantes para o desenvolvimento do jogo
 
 * JOGO
-A classe ´´´Jogo´´´ é onde iremos definir a ´´´ArrayList´´´ dos eventos, esses eventos são baseados em estados, em que o jogo começou, o jogador está jogando, esperando jogada do adversário  e por fim o fim do jogo. Existe também as dificuldades do jogo (Fácil, médio e difícil) que irá definir o algoritmo de "inteligência" da I.A. para acertar os navios do jogador.
+A classe ```Jogo``` é onde iremos definir a ```ArrayList``` dos eventos, esses eventos são baseados em estados, em que o jogo começou, o jogador está jogando, esperando jogada do adversário  e por fim o fim do jogo. Existe também as dificuldades do jogo (Fácil, médio e difícil) que irá definir o algoritmo de "inteligência" da I.A. para acertar os navios do jogador.
 
-´´´python
+```python
 private ArrayList<Evento> eventos;
 
     public Jogo(int dif) {
@@ -32,4 +32,4 @@ private ArrayList<Evento> eventos;
 
         setEstado(POSICIONANDO_NAVIOS);
     }
-´´´
+```
