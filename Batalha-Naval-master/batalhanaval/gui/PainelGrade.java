@@ -123,11 +123,11 @@ public class PainelGrade extends JPanel {
 					}
 
 					painel.repaint();
-				} else if (idNavioAtual <= 32 ) { // Botao esquerdo
+				} else if (idNavioAtual <= 16 ) { // Botao esquerdo
 					try {
 						jogador.getTabuleiro().adicionaNavio(
 								jogador.getNavio(idNavioAtual));
-						if (idNavioAtual == 32) {
+						if (idNavioAtual == 16) {
 							jogador.getJogo().setEstado(Jogo.VEZ_JOG1);
 						} else
 							idNavioAtual *= 2;

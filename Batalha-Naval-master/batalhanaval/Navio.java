@@ -15,7 +15,7 @@ public class Navio implements Serializable {
 	public static final int SUBMARINO = 4; //Submarino
 	public static final int ENCOURACADO = 8; //Fragata
 	public static final int PORTA_AVIOES = 16; //Destroyer
-	public static final int DESTROIER = 32; //Não utilizado
+	
 
 	public static final int HORIZONTAL = 0;
 	public static final int VERTICAL = 1;
@@ -48,8 +48,6 @@ public class Navio implements Serializable {
                 return new Navio("Submarino", 3, 4, jog);
             case ENCOURACADO:                                           
                 return new Navio("Fragata", 4, 8, jog);
-            case DESTROIER:
-            	return new Navio("Destroier", 4, 32, jog);
             default:
                 return null;
 		}

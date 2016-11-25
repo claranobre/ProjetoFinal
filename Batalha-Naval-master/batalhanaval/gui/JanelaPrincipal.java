@@ -279,8 +279,6 @@ public class JanelaPrincipal extends JFrame {
 		switch (id) {
 		case Navio.BARCO_PATRULHA: //Corveta
 			return (or == Navio.VERTICAL ? imagensNavios[5] : imagensNavios[0]);
-		case Navio.DESTROIER:	//Não utilizado                               
-			return (or == Navio.VERTICAL ? imagensNavios[6] : imagensNavios[1]);
 		case Navio.SUBMARINO:	//Submarino                             
 			return (or == Navio.VERTICAL ? imagensNavios[7] : imagensNavios[2]);
 		case Navio.ENCOURACADO: //Fragata                                  

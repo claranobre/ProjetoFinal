@@ -36,15 +36,14 @@ public class Jogador implements Serializable {
 	public Jogador(Jogo jogo) {
 		this.jogo = jogo;
 		this.tabuleiro = new Tabuleiro(10, 10); // Tabuleiro zerado
-		this.frota = new Navio[5];
+		this.frota = new Navio[4];
 			
 		this.tiros = new ArrayList<Point>();
 				
         frota[0] = Navio.constroiNavio(Navio.BARCO_PATRULHA, this); //Corveta
-        frota[1] = Navio.constroiNavio(Navio.DESTROIER, this);	//Não utilizado
-        frota[2] = Navio.constroiNavio(Navio.SUBMARINO, this); //Submarino
-        frota[3] = Navio.constroiNavio(Navio.ENCOURACADO, this); //Fragata
-        frota[4] = Navio.constroiNavio(Navio.PORTA_AVIOES, this); //Destroyer
+        frota[1] = Navio.constroiNavio(Navio.SUBMARINO, this); //Submarino
+        frota[2] = Navio.constroiNavio(Navio.ENCOURACADO, this); //Fragata
+        frota[3] = Navio.constroiNavio(Navio.PORTA_AVIOES, this); //Destroyer
        
         for (int i = 0; i < frota.length; i++)
 			this.frotaRestante += frota[i].getId();
