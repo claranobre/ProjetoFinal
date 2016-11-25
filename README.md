@@ -18,9 +18,23 @@ Lembrando que nenhum navio poderá estar sobreoposto ao outro.
 
 * [JOGO] (Jogo.java)
 
-A classe ```Jogo``` é onde iremos definir a ```ArrayList``` dos eventos, esses eventos são baseados em estados, em que o jogo começou, o jogador está jogando, esperando a jogada do adversário  e o fim do jogo. Para ser possível captar esses estados foi utilizado ```Serialização``` dos objetos. Sabendo que como a classe Pai implementou ```Serializable``` então as subclasses implicitamente farão Serialização, e como trabalhamos com Herança e Polimorfismo todas as demais classes implementam ```Serializable```.Existe também as dificuldades do jogo (fácil, médio e difícil) que irá definir o algoritmo de "inteligência" da I.A. para acertar os navios do jogador.
+A classe ```Jogo``` é onde iremos definir a ```ArrayList``` dos eventos, esses eventos são baseados em estados, em que o jogo começou, o jogador está jogando, esperando a jogada do adversário  e o fim do jogo. Para ser possível captar esses estados foi utilizado ```Serialização``` dos objetos. Sabendo que como a classe Pai implementou ```Serializable``` então as subclasses implicitamente farão Serialização, e como trabalhamos com Herança e Polimorfismo todas as demais classes implementam ```Serializable```.Existe também as dificuldades do jogo (fácil, médio e difícil) que irá definir o algoritmo de "inteligência" da I.A. para posicionar os seus navios.
 
 
 * [JOGADOR] (Jogador.java)
 
-A classe ```Jogador``` será onde criamos os navios, dando origem a frota do jogador e onde ele irá posiciá-la, todo o jogo funciona em função de ```ArrayList``` portanto a localização dos navios é dada por manipulação de linhas e colunas. O ato de ```atirar``` e ```atirar aleatoriamente``` é definida na classe para que possa ser utilizado tanto pelo jogador quanto pelo robô (I.A.) garantindo que ambos atirem em suas jogadas, caso contrário, uma exceção é tratada. O navio é destruído quando o jogador consegue atirar em todos os quadrados pertencentes a imagem do navio, que depende do tipo de navio, e consequentemente seu tamanho, cada navio possui uma ID identificadora que é decrementada cada vez que o oponente acerta um navio completo, portanto quando esse valor chegar a 0 significa que todos os navios (pois todas as IDs foram removidas) foram afundados, e um campeão do jogo é setado.
+A classe ```Jogador``` será onde chamaremos a função de construção(```constroiNavio```) dos Navios, dando origem a frota do jogador e onde ele irá posiciá-la, todo o jogo funciona em função de ```ArrayList``` portanto a localização dos navios é dada por manipulação de linhas e colunas. O ato de ```atirar``` e ```atirar aleatoriamente``` é definida na classe para que possa ser utilizado tanto pelo jogador quanto pelo robô (I.A.) garantindo que ambos atirem em suas jogadas, caso contrário, uma exceção é tratada. O navio é destruído quando o jogador consegue atirar em todos os quadrados pertencentes a imagem do navio, que depende do tipo de navio, e consequentemente seu tamanho, cada navio possui uma ID identificadora que é decrementada cada vez que o oponente acerta um navio completo, portanto quando esse valor chegar a 0 significa que todos os navios (pois todas as IDs foram removidas) foram afundados, e um campeão do jogo é setado.
+
+* [NAVIO] (Navio.java)
+
+A classe ```Navio``` conterá todas as informações da frota que o jogo possuirá, em que cada um terá o seu identificador, permitirá que o usuário posicione o navio em duas posições (horizontal e vertical), organizará a ordem em que os navios serão entregues ao usuário para posicioná-los, irá verificar se o navio foi posicionado corretamente, caso contrário o erro será tratado e por fim irá verificar e retornar se o navio foi destruído no jogo para retornar seu estado atual ao usuário no tabuleiro.  
+
+* [ROBO] (Robo.java)
+
+A classe ```Robô``` é que cria a inteligencia artificial, verificando as posições dos navios (utilizando orientação cartesiana),  criando por meio da escolha de dificuldade onde melhor posicionar sua frota dificultando o acerto do adversário, utilizando da função ```Math.random``` em todas as posições, inclusive para atirar.
+
+* [TABULEIRO] (Tabuleiro.java)
+
+A classe ```Tabuleiro``` é que irá formar toda a matriz do mapa, tamanho, irá verificar se no espaço em que o jogador está tentando colocar um navio de sua frota tem área suficiente para a imagem e irá retornar todas as posições onde os navios se encontram.
+
+## Interface Gráfica
