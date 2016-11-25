@@ -16,9 +16,11 @@ Lembrando que nenhum navio poderá estar sobreoposto ao outro.
 
 ## Classes mais importantes para o desenvolvimento do jogo
 
-* [JOGO](Jogo.java)
+* [JOGO] (Jogo.java)
 
 A classe ```Jogo``` é onde iremos definir a ```ArrayList``` dos eventos, esses eventos são baseados em estados, em que o jogo começou, o jogador está jogando, esperando a jogada do adversário  e o fim do jogo. Para ser possível captar esses estados foi utilizado ```Serialização``` dos objetos. Sabendo que como a classe Pai implementou ```Serializable``` então as subclasses implicitamente farão Serialização, e como trabalhamos com Herança e Polimorfismo todas as demais classes implementam ```Serializable```.Existe também as dificuldades do jogo (fácil, médio e difícil) que irá definir o algoritmo de "inteligência" da I.A. para acertar os navios do jogador.
 
 
-* JOGADOR
+* [JOGADOR] (Jogador.java)
+
+A classe ```Jogador``` será onde criamos os navios, dando origem a frota do jogador e onde ele irá posiciá-la, todo o jogo funciona em função de ```ArrayList``` portanto a localização dos navios é dada por manipulação de linhas e colunas. O ato de ```atirar``` e ```atirar aleatoriamente``` é definida na classe para que possa ser utilizado tanto pelo jogador quanto pelo robô (I.A.) garantindo que ambos atirem em suas jogadas, caso contrário, uma exceção é tratada. O navio é destruído quando o jogador consegue atirar em todos os quadrados pertencentes a imagem do navio, que depende do tipo de navio, e consequentemente seu tamanho, cada navio possui uma ID identificadora que é decrementada cada vez que o oponente acerta um navio completo, portanto quando esse valor chegar a 0 significa que todos os navios (pois todas as IDs foram removidas) foram afundados, e um campeão do jogo é setado.
