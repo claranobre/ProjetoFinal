@@ -38,7 +38,9 @@ public class JanelaSobre extends JDialog implements ActionListener {
                 + "\nLaboratorio de Programacao II"
                 + "\n\nProfessor: Joao Carlos Xavier"
                 + "\n\nAlunos:\nIcaro Heitor de Souza Ferreira\n"
-                + "Ana Clara Nobre Mendes");
+                + "Ana Clara Nobre Mendes\n"
+                + "Esse jogo foi baseado nesse projeto: https://github.com/dcampos/Batalha-Naval\n"
+        		);
         creditos.setOpaque(false);
         creditos.setEditable(false);
  

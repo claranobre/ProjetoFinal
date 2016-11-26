@@ -60,7 +60,7 @@ public class PainelGrade extends JPanel {
 		addMouseListener(tm);
 		addMouseMotionListener(tm);
 
-		// Mostrar navios?
+		// Mostrar navios
 		mostrarNavios = (jogador.getOponente() instanceof Robo ? true : false);
 	}
 

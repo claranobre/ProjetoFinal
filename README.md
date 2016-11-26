@@ -38,3 +38,31 @@ A classe ```Robô``` é que cria a inteligencia artificial, verificando as posi�
 A classe ```Tabuleiro``` é que irá formar toda a matriz do mapa, tamanho, irá verificar se no espaço em que o jogador está tentando colocar um navio de sua frota tem área suficiente para a imagem e irá retornar todas as posições onde os navios se encontram.
 
 ## Interface Gráfica
+
+A interface gráfica do jogo foi desenvolvida usando a biblioteca Swing, no pacote ```batalhanaval.gui```, teremos três classes ```JanelaPrincipal```, ```JanelaSobre``` e ```PainelGrade```, na primeira utilizando ```JFrame``` faremos a chamada das imagens de fundo do jogo, imagens dos navios, do tiro e todas as barras de menu, setando tamanho, cor e formato desejado.
+
+```python
+ActionListener fazJogada = new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				if (JanelaPrincipal.this.jogo.getEstado() == Jogo.VEZ_JOG2) {
+					int res = JanelaPrincipal.this.jogo.getJogador(1).atira();
+					mapa1.repaint();
+
+					if (res == 1) {
+						temp.stop();
+						JanelaPrincipal.this.jogo.setEstado(Jogo.VEZ_JOG1);
+					} else if ( res > 1) {
+						if (JanelaPrincipal.this.jogo.getEstado() == Jogo.TERMINADO) {
+							temp.stop();
+                            mostraEventos();
+						} else if (JanelaPrincipal.this.jogo.getJogador(
+								0 ).getNavio(res).estaDestruido())
+                            mostraEventos();
+					}
+				}
+			}
+		};
+```
+O ```actionListener``` acima fará a chamada dos eventos do jogo, garantindo o início do jogo, espera de jogada dos jogadores e finalização do jogo.		
+A classe ```JanelaSobre``` foi desenvolvida só para fornecer informações sobre o jogo, dos desenvolvedores e a versão.
+Já a classe ```PainelGrade``` é onde será tratado todos os movimentos do mouse usando de herança das bibliotecas ```MouseListener``` e ```MouseMotionListener```, o método garante que o jogador selecione a posição do seu navio e rotacione para a horizontal ou vertical como desejar e irá verificar se o local onde você está tentando posicioná-lo tem quadrados suficientes para o tamanho do navio que está sendo posicionado.	
