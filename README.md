@@ -1,5 +1,8 @@
 # ProjetoFinal
 
+Alunos: Ana Clara Nobre [GitHub] (https://github.com/claranobre)
+		Icaro Heitor [GitHub](https://github.com/icarotangara)
+
 Projeto de criação de um jogo de Batalha Naval da disciplina de Linguagem de Programação II. 
 Esse projeto é um fork de outro projeto já existente [GitHub](https://github.com/dcampos/Batalha-Naval).
 O jogo apresenta as regras tradicionais do Batalha Naval, em que o jogador e uma Inteligencia Artificial(I.A.) estarão disputando quem irá descobrir a localização da frota do oponente e destruí-la primeiro. Cada jogador possui 4 tipos de navios diferentes(Fragata, Destroyer, Submarino e Corveta), o jogador usuário poderá posicionar aleatoriamente seus navios em um tabuleiro 10x10, já a inteligencia artificial terá seus navios dispostos aleatoriamente em um outro tabuleiro com as mesmas definições.
@@ -39,7 +42,8 @@ A classe ```Tabuleiro``` é que irá formar toda a matriz do mapa, tamanho, irá
 
 ## Interface Gráfica
 
-A interface gráfica do jogo foi desenvolvida usando a biblioteca Swing, no pacote ```batalhanaval.gui```, teremos três classes ```JanelaPrincipal```, ```JanelaSobre``` e ```PainelGrade```, na primeira utilizando ```JFrame``` faremos a chamada das imagens de fundo do jogo, imagens dos navios, do tiro e todas as barras de menu, setando tamanho, cor e formato desejado.
+A interface gráfica do jogo foi desenvolvida usando a biblioteca Java Swing, no pacote ```batalhanaval.gui```, teremos três classes ```JanelaPrincipal```, ```JanelaSobre``` e ```PainelGrade```, na primeira utilizando ```JFrame```
+faremos a chamada das imagens de fundo do jogo, imagens dos navios, do tiro e todas as barras de menu, setando tamanho, cor e formato desejado.
 
 ```python
 ActionListener fazJogada = new ActionListener() {
@@ -66,3 +70,7 @@ ActionListener fazJogada = new ActionListener() {
 O ```actionListener``` acima fará a chamada dos eventos do jogo, garantindo o início do jogo, espera de jogada dos jogadores e finalização do jogo.		
 A classe ```JanelaSobre``` foi desenvolvida só para fornecer informações sobre o jogo, dos desenvolvedores e a versão.
 Já a classe ```PainelGrade``` é onde será tratado todos os movimentos do mouse usando de herança das bibliotecas ```MouseListener``` e ```MouseMotionListener```, o método garante que o jogador selecione a posição do seu navio e rotacione para a horizontal ou vertical como desejar e irá verificar se o local onde você está tentando posicioná-lo tem quadrados suficientes para o tamanho do navio que está sendo posicionado.	
+
+[Interface] (http://i.imgur.com/LAUiAOW.png)
+
+## Como rodar o jogo
