@@ -71,6 +71,6 @@ O ```actionListener``` acima fará a chamada dos eventos do jogo, garantindo o i
 A classe ```JanelaSobre``` foi desenvolvida só para fornecer informações sobre o jogo, dos desenvolvedores e a versão.
 Já a classe ```PainelGrade``` é onde será tratado todos os movimentos do mouse usando de herança das bibliotecas ```MouseListener``` e ```MouseMotionListener```, o método garante que o jogador selecione a posição do seu navio e rotacione para a horizontal ou vertical como desejar e irá verificar se o local onde você está tentando posicioná-lo tem quadrados suficientes para o tamanho do navio que está sendo posicionado.	
 
-[Interface] (http://i.imgur.com/LAUiAOW.png)
+![alt tag] (http://i.imgur.com/LAUiAOW.png)
 
 ## Como rodar o jogo
