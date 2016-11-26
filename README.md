@@ -1,7 +1,7 @@
 # ProjetoFinal
 
-Alunos: Ana Clara Nobre [GitHub] (https://github.com/claranobre)
-		Icaro Heitor [GitHub](https://github.com/icarotangara)
+Alunos: Ana Clara Nobre [[GitHub]] (https://github.com/claranobre)
+		Icaro Heitor [[GitHub]](https://github.com/icarotangara)
 
 Projeto de criação de um jogo de Batalha Naval da disciplina de Linguagem de Programação II. 
 Esse projeto é um fork de outro projeto já existente [GitHub](https://github.com/dcampos/Batalha-Naval).
