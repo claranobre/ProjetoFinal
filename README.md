@@ -15,7 +15,7 @@ O jogo basicamente é baseado em ações (eventos) quê o usuário precisa escol
  * Destroyer 1x5 
 
 Se o jogador selecionar um quadrado que não contém navio o próximo terá sua vez de jogar e assim sucessivamente até que um dos jogadores encontre e destrua todos os navios do oponente. 
-Lembrando que nenhum navio poderá estar sobreoposto ao outro. 
+Lembrando que nenhum navio poderá estar sobreposto ao outro. 
 
 ## Classes mais importantes para o desenvolvimento do jogo
 
