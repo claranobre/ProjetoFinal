@@ -5,16 +5,16 @@ Alunos: Ana Clara Nobre [[GitHub]] (https://github.com/claranobre)
 
 Projeto de criação de um jogo de Batalha Naval da disciplina de Linguagem de Programação II. 
 Esse projeto é um fork de outro projeto já existente [GitHub](https://github.com/dcampos/Batalha-Naval).
-O jogo apresenta as regras tradicionais do Batalha Naval, em que o jogador e uma Inteligencia Artificial(I.A.) estarão disputando quem irá descobrir a localização da frota do oponente e destruí-la primeiro. Cada jogador possui 4 tipos de navios diferentes(Fragata, Destroyer, Submarino e Corveta), o jogador usuário poderá posicionar aleatoriamente seus navios em um tabuleiro 10x10, já a inteligencia artificial terá seus navios dispostos aleatoriamente em um outro tabuleiro com as mesmas definições.
+O jogo apresenta as regras tradicionais do Batalha Naval, em que o jogador e uma Inteligencia Artificial(I.A.) estarão disputando quem irá descobrir a localização da frota do oponente e destruí-la primeiro. Cada jogador possui 4 tipos de navios diferentes(Fragata, Destroyer, Submarino e Corveta), em quê poderá posicionar aleatoriamente seus navios em um tabuleiro 10x10. Já a inteligencia artificial terá seus navios dispostos aleatoriamente em um outro tabuleiro com as mesmas definições.
 
 ## O Jogo
-O jogo basicamente é baseado em ações (eventos) em quê o usuário precisa escolher o lugar no tabuleiro do adversário em que irá atirar, se caso acertar um quadrado que pertence a região onde encontra-se um navio, o jogador poderá atacar novamente na tentativa de destruir o navio por completo, cada navio tem tamanhos diferentes:
+O jogo basicamente é baseado em ações (eventos) quê o usuário precisa escolher o lugar no tabuleiro do adversário em que irá atirar, caso acerte um quadrado que pertence a região onde encontra-se um navio, o jogador poderá atacar novamente na tentativa de destruir o navio por completo. Cada navio tem tamanhos diferentes:
  * Corveta 1x2 
  * Submarino 1x3  
  * Fragata 1x4 
  * Destroyer 1x5 
 
-Se caso o jogador selecionar um quadrado que não contém nenhum navio o próximo terá sua vez de jogar e assim sucessivamente até que um dos jogadores encontre e destrua todos os navios do oponente. 
+Se o jogador selecionar um quadrado que não contém navio o próximo terá sua vez de jogar e assim sucessivamente até que um dos jogadores encontre e destrua todos os navios do oponente. 
 Lembrando que nenhum navio poderá estar sobreoposto ao outro. 
 
 ## Classes mais importantes para o desenvolvimento do jogo
@@ -26,7 +26,7 @@ A classe ```Jogo``` é onde iremos definir a ```ArrayList``` dos eventos, esses 
 
 * [JOGADOR] (Jogador.java)
 
-A classe ```Jogador``` será onde chamaremos a função de construção(```constroiNavio```) dos Navios, dando origem a frota do jogador e onde ele irá posiciá-la, todo o jogo funciona em função de ```ArrayList``` portanto a localização dos navios é dada por manipulação de linhas e colunas. O ato de ```atirar``` e ```atirar aleatoriamente``` é definida na classe para que possa ser utilizado tanto pelo jogador quanto pelo robô (I.A.) garantindo que ambos atirem em suas jogadas, caso contrário, uma exceção é tratada. O navio é destruído quando o jogador consegue atirar em todos os quadrados pertencentes a imagem do navio, que depende do tipo de navio, e consequentemente seu tamanho, cada navio possui uma ID identificadora que é decrementada cada vez que o oponente acerta um navio completo, portanto quando esse valor chegar a 0 significa que todos os navios (pois todas as IDs foram removidas) foram afundados, e um campeão do jogo é setado.
+A classe ```Jogador``` será onde chamaremos a função de construção(```constroiNavio```) dos Navios, dando origem a frota do jogador e onde ele irá posicioná-la, todo o jogo funciona em função de ```ArrayList``` portanto a localização dos navios é dada por manipulação de linhas e colunas. O ato de ```atirar``` e ```atirar aleatoriamente``` é definida na classe para que possa ser utilizado tanto pelo jogador quanto pelo robô (I.A.) garantindo que ambos atirem em suas jogadas, caso contrário, uma exceção é tratada. O navio é destruído quando o jogador consegue atirar em todos os quadrados pertencentes a imagem do navio, que depende do tipo de navio, e consequentemente seu tamanho, cada navio possui uma ID identificadora que é decrementada cada vez que o oponente acerta um navio completo, portanto quando esse valor chegar a 0 significa que todos os navios (pois todas as IDs foram removidas) foram afundados, e um campeão do jogo é setado.
 
 * [NAVIO] (Navio.java)
 
