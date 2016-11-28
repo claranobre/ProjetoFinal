@@ -74,3 +74,5 @@ Já a classe ```PainelGrade``` é onde será tratado todos os movimentos do mous
 ![alt tag] (http://i.imgur.com/LAUiAOW.png)
 
 ## Como rodar o jogo
+
+O usuário só precisa fazer o download do projeto no [GitHub] (https://github.com/claranobre/ProjetoFinal) e em um terminal (Linux ou Windows) acessar o diretório do Projeto em sua máquina, e com o Java instalado, digitar ```java -jar BatalhaNaval.jar``` que o jogo será iniciado. 
